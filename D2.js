@@ -5,13 +5,13 @@
 /* SCRIVI QUI LA TUA RISPOSTA */
 const num1 = 20;
 const num2 = 29;
-const trovaMax = (num1, num2);
+
 if (num1 > num2) {
-  num1;
+  console.log("il numero più grande è:", num1);
 } else {
-  num2;
+  console.log("il numero più grande è:", num2);
 }
-console.log(trovaMax);
+
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
 
@@ -41,7 +41,7 @@ if (num4 % 5 === 0) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 const num5 = 24;
 const num6 = 32;
-if (num1 === 8 || num6 - num5 === 8) {
+if (num1 === 8 || num2 === 8 || num6 - num5 === 8 || num5 - num6 === 8) {
   console.log(true);
 }
 
@@ -52,34 +52,26 @@ if (num1 === 8 || num6 - num5 === 8) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const num7 = 10;
-const num8 = 10;
-const num9 = 25;
-const totalShoppingCart = [num7, num8, num9];
-if (totalShoppingCart > 50) {
-  console.log("spedizione gratuita");
+let totalShoppingCart = 45;
+shippingCost = 10;
+if (totalShoppingCart < 50) {
+  console.log(totalShoppingCart + shippingCost);
 } else {
-  console.log("costo spedizione 10");
+  console.log(totalShoppingCart);
 }
-const totalCart = num7 + num8 + num9;
-console.log(totalCart);
-
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
-let totalShoppingCart2 = [num7, num8, num9];
-const promozione = (totalCart * 20) / 100;
-if (totalShoppingCart2 > 50) {
-  console.log("spedizione gratuita");
+let totalShoppingCart2 = totalShoppingCart - (45 * 20) / 100;
+shippingCost2 = 10;
+if (totalShoppingCart < 50) {
+  console.log(totalShoppingCart2 + shippingCost);
 } else {
-  console.log("costo spedizione 10");
+  console.log(totalShoppingCart2);
 }
-const totale = totalCart - promozione;
-console.log(totale);
 
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
@@ -88,18 +80,55 @@ console.log(totale);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let z1 = 6;
+let z2 = 14;
+let z3 = 10;
+
+if (z1 >= z2) {
+  if (z3 >= z1) {
+    console.log(z3, z1, z2);
+  } else {
+    if (z3 >= z2) {
+      console.log(z1, z3, z2);
+    } else {
+      console.log(z1, z2, z3);
+    }
+  }
+} else {
+  if (z3 >= z2) {
+    console.log(z3, z2, z1);
+  } else {
+    if (z3 >= z1) {
+      console.log(z2, z3, z1);
+    } else {
+      console.log(z2, z1, z3);
+    }
+  }
+}
 
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const parola = "bella zio";
+if (typeof parola === "number") {
+  console.log("è un numero");
+} else {
+  console.log("non è un numero");
+}
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let test = 29;
+if (test / 2 === 0) {
+  console.log("pari");
+} else {
+  console.log("dispari");
+}
 
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
@@ -113,7 +142,14 @@ console.log(totale);
     }
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* SCRIVI QUI LA TUA RISPOSTA */ let val = 7;
+if (val < 5) {
+  console.log("Meno di 5");
+} else if (val < 10) {
+  console.log("meno di 10");
+} else {
+  console.log("Uguale a 10 o maggiore");
+}
 
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
@@ -126,27 +162,44 @@ const me = {
 };
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+me.city = "Toronto";
+console.log(me);
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+delete me.lastName;
+console.log(me);
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+me.skills.pop();
+console.log(me);
 
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let myArray = [];
+myArray.push(1);
+myArray.push(2);
+myArray.push(3);
+myArray.push(4);
+myArray.push(5);
+myArray.push(6);
+myArray.push(7);
+myArray.push(8);
+myArray.push(9);
+myArray.push(10);
+console.log(myArray);
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+myArray[9] = 100;
+console.log(myArray);
